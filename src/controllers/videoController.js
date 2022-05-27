@@ -32,9 +32,7 @@ export const postUpload = async (req, res) => {
 			description,
 			hashtags: hashtags
 				.split(",")
-				.map((word) =>
-					!word.trim().startsWith("#") ? `#${word.trim()}` : word.trim()
-				),
+				.map((word) => (!word.startsWith("#") ? `#${word}` : word)),
 		});
 		res.redirect("/");
 	} catch (error) {
