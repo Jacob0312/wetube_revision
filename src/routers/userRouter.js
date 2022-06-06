@@ -5,6 +5,7 @@ import {
 	see,
 	startGithubLogin,
 	finishGithubLogin,
+	startKakaoLogin,
 } from "../controllers/userController";
 const userRouter = express.Router();
 
@@ -14,5 +15,5 @@ userRouter.get("/edit", edit);
 userRouter.get(":id", see);
 userRouter.get("/github/start", startGithubLogin);
 userRouter.get("/github/finish", finishGithubLogin);
-
+userRouter.get("/kakao/start", startKakaoLogin);
 export default userRouter;

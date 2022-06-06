@@ -132,6 +132,13 @@ export const logout = (req, res) => {
 	req.session.destroy();
 	return res.redirect("/");
 };
+
+export const startKakaoLogin = (req, res) => {
+	const baseUrl = "https://kakao.com/login/oauth/authorize";
+	const config = {
+		target_id_type,
+	};
+};
 export const edit = (req, res) => res.send("Edit User");
 
 export const see = (req, res) => res.send("See User");
